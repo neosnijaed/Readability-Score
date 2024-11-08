@@ -52,8 +52,7 @@ def main() -> None:
     ari_age1, ari_age2 = automated_readability_scores_ages[ari_score]
     fk_age1, fk_age2 = automated_readability_scores_ages[fk_score]
     dc_age1, dc_age2 = automated_readability_scores_ages[dc_score]
-    age_avg = (min(ari_age1, ari_age2, fk_age1, fk_age2, dc_age1, dc_age2) +
-               max(ari_age1, ari_age2, fk_age1, fk_age2, dc_age1, dc_age2)) / 2
+    age_avg = (min(ari_age1, fk_age1, dc_age1) + max(ari_age2, fk_age2, dc_age2)) / 2
 
     # display results
     print('Text:', text)
